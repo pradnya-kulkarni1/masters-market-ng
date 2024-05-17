@@ -1,0 +1,10 @@
+<nav>
+    <div class ="nav-centered">
+    <ul width="100%">
+    {{title}}
+<li *ngFor=" let mi of menuItems" title="{{mi.tooltip}}">
+<a routerLink = "{{mi.href}}">{{mi.display}}</a>
+</li>{{welcomeMsg}}
+</ul>
+</div>
+</nav> 

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+div {
+    padding: 20px;
+}
+ body{
+
+    background-image: url(./assets/grocery2.jpg);
+    background-size:cover;
+    height:auto;
+    width:auto;
+    background-color:transparent;
+    font-size:large;
+    font:bold;
+    
+}
