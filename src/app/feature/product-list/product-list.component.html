@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div>
+    <section class="heading">
+      <span class="page-title font-weight-bold font-italic">[{{ title }}]</span>
+      <a routerLink="/product/create">
+        <img width="20" height="20" src="assets/add-icon.png" title="Add New" />
+      </a>
+    </section>
+    <table *ngIf="products" class="table table-sm table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Vendor</th>
+          <th>Partnumber</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Unit</th>
+          <th>PhotoPath</th>
+          <th >Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.vendor.code +" "+product.vendor.name }}</td>
+          <td>{{ product.partNumber }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price| currency}}</td>
+          <td>{{ product.unit }}</td>
+          <td>{{ product.photoPath }}</td>
+          <td>{{ product.type}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
