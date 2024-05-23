@@ -1,14 +1,27 @@
 <app-menu></app-menu>
-<div class="verticalcenter">
-<nav>
-<a routerLink = "/product/type/Fruits">
-<img width="100" height ="100" src="assets/Apple.jpg" alt ="Centered Image" title = "Red Delicious Apple 2.85 lb">
-</a>
-</nav>
+<div class="product-type">
+    <main class="single">
+        
+        <table class="table table-sm">
+            <thead>
+            <th routerLink = "/product/type/type">{{this.type}}</th>
+            <th>Price</th>
+            <th>Unit</th>
+            <th>Image</th>
+            <th>Action</th>
+            
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.name}}</td>
+            <td>{{p.price|currency}}</td>
+            <td>{{p.unit}}</td>
+            <td><img width="100" height ="100" src="{{p.photoPath}}" alt ="Centered Image" title ="Banana Dole $0.59 lb"></td>
+            <button (click) = "add()" class="btn btn-sm btn-primary">+</button>
+        </tr>
+        
+    </tbody>
+</table>
 
+</main>
 </div>
-<nav>
-    <a routerLink = "/product/type/Veggie">
-    <img width="100" height ="100" src="assets/Broccoli.jpg" alt ="Centered Image" title = "Red Delicious Apple 2.85 lb">
-</a>
-</nav>

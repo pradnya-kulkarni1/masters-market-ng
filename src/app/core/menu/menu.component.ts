@@ -18,12 +18,12 @@ ngOnInit(): void {
   // we will create menu item for each menu item in our menu : user, product, vendor
 
  
-this.menuItems.push(new MenuItem("Fruits","/product/type/Fruits","product type"));
+this.menuItems.push(new MenuItem("Fruits","/product/type/Fruit","product type"));
 this.menuItems.push(new MenuItem("Veggies","/product/type/Veggie","product type"));
 this.menuItems.push(new MenuItem("Grains","/product/type/Grain","product type"));
 this.menuItems.push(new MenuItem("Dairy","/product/type/Dairy","product type"));
 this.menuItems.push(new MenuItem("Snacks","/product/type/Snacks","product type"));
-this.menuItems.push(new MenuItem("Cart","/product/type","product fruit"));
+this.menuItems.push(new MenuItem("Cart","/lineItem/list","Your Cart"));
 
 this.sysSvc.checkLogin;
 if (this.sysSvc.loggedInUser.id ==0){

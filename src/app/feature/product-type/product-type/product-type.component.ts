@@ -3,6 +3,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../model/product';
 import { ProductService } from '../../../service/product.service';
 import { SystemService } from '../../../service/system.service';
+import { RequestService } from '../../../service/request.service';
+import {Request} from '../../../model/request';
+
 
 @Component({
   selector: 'app-product-type',
@@ -15,11 +18,15 @@ export class ProductTypeComponent implements OnInit {
   adminUser?: boolean = undefined;
   type: string = "";
   isFruit?: boolean=undefined;
+  request: Request = new Request();
+  message?: string = undefined;
+  
  
 
   constructor(private productSvc: ProductService,
-      sysSvc: SystemService,
-      router: Router,
+      private sysSvc: SystemService,
+      private requestSvc: RequestService,
+      private router: Router,
       private route: ActivatedRoute) {  
         
       }
@@ -47,4 +54,20 @@ export class ProductTypeComponent implements OnInit {
 });
 
   }
-}
+
+  add(): void{
+    this.requestSvc.createRequest(this.request).subscribe({
+      next: (resp) => {
+        this.request = resp;
+        this.router.navigateByUrl('/request/list');
+      },
+      error: (err) => {
+        console.log("Error creating request: ", err);
+        this.message = "Error creating request.";
+      },
+      complete: () => {}
+    });
+
+  }
+
+  }

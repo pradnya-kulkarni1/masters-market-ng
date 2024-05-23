@@ -10,6 +10,12 @@ import { CustomerLoginComponent } from './feature/customer/customer-login/custom
 import { ProductListComponent } from './feature/product-list/product-list.component';
 import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.component';
 import { ProductTypeComponent } from './feature/product-type/product-type/product-type.component';
+import { LineItemListComponent } from './feature/lineItem/line-item-list/line-item-list.component';
+import { RequestListComponent } from './feature/request/request-list/request-list.component';
+import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
+import { RequestEditComponent } from './feature/request/request-edit/request-edit.component';
+import { LineItemEditComponent } from './feature/lineItem/line-item-edit/line-item-edit.component';
+
 
 
 @NgModule({
@@ -21,6 +27,12 @@ import { ProductTypeComponent } from './feature/product-type/product-type/produc
     ProductListComponent,
     VendorListComponent,
     ProductTypeComponent,
+    LineItemListComponent,
+    RequestListComponent,
+    RequestCreateComponent,
+    RequestEditComponent,
+    LineItemEditComponent,
+  
     
   ],
   imports: [

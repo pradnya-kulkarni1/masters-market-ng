@@ -1,3 +1,36 @@
-.verticalcenter {
-    vertical-align: middle;
+
+  tr{
+    background: rgba(244, 242, 187, 0.75)
   }
+  .product-type {
+    width: 30%;
+    margin: 50px auto;
+    background: rgba(167, 238, 180, 0.75); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    align-items:center;
+    box-shadow: 0 4px 8px rgba(254, 253, 253, 0.723);
+  }
+  table, th, td {
+    border: 1px solid #fafefe;
+  
+  }
+  .btn{
+    background-color: #24a0ed;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    align-items:center;
+    
+    
+    border-radius: 10px; /* Adjust as needed */
+}
+
+.btn:hover{
+  background-color: rgb(121, 234, 129);
+}
